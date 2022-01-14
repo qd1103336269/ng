@@ -10,6 +10,5 @@ export class HomeComponent implements OnInit {
     constructor(private i18nService: I18nService) {}
 
     ngOnInit() {
-        this.i18nService.changeLocale('zh_CN');
     }
 }
