@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../../share/services/auth.service';
 import { I18nService } from '../../share/services/i18n.service';
 
 @Component({
@@ -7,8 +8,12 @@ import { I18nService } from '../../share/services/i18n.service';
     styleUrls: ['./home.component.less'],
 })
 export class HomeComponent implements OnInit {
-    constructor(private i18nService: I18nService) {}
+    constructor(private i18nService: I18nService, private auth: AuthService) {}
 
     ngOnInit() {
+    }
+
+    logout() {
+        this.auth.logout();
     }
 }
